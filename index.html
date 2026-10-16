@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitHub, brick by brick</title>
+  <meta name="description" content="A semantic-brick learning site for the features of GitHub.com: seven enabling objectives, fifty bricks, one relationship map, seven transfer tools." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='9' width='28' height='14' rx='2' fill='%231F7A72'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="site-head">
+    <a class="brand" href="#/">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>GitHub, brick by brick</span>
+    </a>
+    <nav class="site-nav" aria-label="Enabling objectives">
+      <a href="#/" data-nav="home">Map</a>
+      <a href="#/eo/1" data-nav="eo-1">Repo</a>
+      <a href="#/eo/2" data-nav="eo-2">Change</a>
+      <a href="#/eo/3" data-nav="eo-3">Track</a>
+      <a href="#/eo/4" data-nav="eo-4">Automate</a>
+      <a href="#/eo/5" data-nav="eo-5">Secure</a>
+      <a href="#/eo/6" data-nav="eo-6">Ship</a>
+      <a href="#/eo/7" data-nav="eo-7">Agents</a>
+      <a href="#/transfer" data-nav="transfer">Transfer run</a>
+    </nav>
+    <button class="map-toggle" type="button" aria-expanded="false" aria-controls="map-overlay">
+      <span class="map-toggle-wall" aria-hidden="true"></span>
+      Map
+    </button>
+  </header>
+
+  <div class="layout">
+    <main id="content" class="content" tabindex="-1"></main>
+    <aside class="map-rail" aria-label="Relationship map">
+      <div class="rail-head">
+        <span class="rail-title">Every brick</span>
+        <span class="rail-progress" data-progress></span>
+      </div>
+      <svg class="wall-svg" data-wall="rail" role="img" aria-label="Map of all bricks, grouped by objective"></svg>
+      <p class="rail-hint">Solid bricks are laid. The bright one is where you are; its neighbours are lit.</p>
+    </aside>
+  </div>
+
+  <div id="map-overlay" class="map-overlay" hidden>
+    <div class="overlay-bar">
+      <span class="rail-title">Every brick</span>
+      <span class="rail-progress" data-progress></span>
+      <button class="overlay-close" type="button">Close</button>
+    </div>
+    <div class="overlay-scroll">
+      <svg class="wall-svg wall-svg-large" data-wall="overlay" role="img" aria-label="Map of all bricks, grouped by objective"></svg>
+    </div>
+    <p class="rail-hint">Tap a brick to open it. Scroll sideways if the wall is wider than the screen.</p>
+  </div>
+
+  <footer class="site-foot">
+    <span>Built as a semantic-brick class. The repo you are reading this from is also the specimen for EO4 and EO5.</span>
+    <button type="button" class="link-button" data-reset>Reset progress</button>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

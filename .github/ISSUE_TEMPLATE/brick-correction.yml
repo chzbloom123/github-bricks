@@ -1,0 +1,34 @@
+# An issue form. EO3 "Templates and the .github folder" points here.
+name: Brick correction
+description: A brick says something that is wrong, stale, or unclear.
+title: "[brick] "
+labels: [brick-correction]
+body:
+  - type: input
+    id: brick
+    attributes:
+      label: Which brick?
+      description: The label as shown on the page, e.g. "Rulesets".
+    validations:
+      required: true
+  - type: dropdown
+    id: part
+    attributes:
+      label: Which part?
+      options:
+        - What it is
+        - Why it exists
+        - Where it lives
+        - When you reach for it
+        - Note
+        - Check question
+        - Links
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong, and what should it say?
+      description: If GitHub changed something, link the changelog or docs page.
+    validations:
+      required: true

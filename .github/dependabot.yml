@@ -1,0 +1,8 @@
+# Keeps the actions used by the workflow current. There are no npm dependencies to track.
+# EO5 "Dependabot updates" and EO4 "Pinning actions" point here.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

@@ -1,0 +1,19 @@
+# Runs scripts/validate.js on every push and pull request.
+# This is the check that EO2 "Checks" and EO4 "Workflow" point at.
+name: validate-bricks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/validate.js
